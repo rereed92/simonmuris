@@ -1,0 +1,351 @@
+
+/* ==================================
+Fonts
+=====================================	
+*/
+ 
+/* ==================================
+Colours
+=====================================  
+ */
+ 
+ /* ==================================
+Bases
+=====================================
+ */
+
+ 
+/* ==================================
+Resets
+=====================================*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+	font-size:1.000em;
+	line-height:1em;
+	padding:0;
+	margin:0;
+	color:#000;
+	font-family: Arial, Helvetica, sans-serif;
+	min-width: 320px;
+}
+
+ul, li{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, address, main, figure{
+	padding:0;
+	margin:0 0 10px 0;	
+	font-style:normal;
+	font-size:1em;
+	font-weight:normal;
+	line-height:1.3em;
+	display:block;
+}
+
+h1, h2, h3, h4, h5{
+	margin:0 0 10px 0;
+	width:100%;
+	font-weight:bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+p, figcaption, label, li, caption{
+	font-size: 0.938em;
+	line-height: 1.3em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+	font-size: 3em;
+	line-height: 1.1em;
+}
+
+h2{
+	font-size: 2em;
+}
+
+h3{
+	font-size: 1.5em;
+}
+
+h4{
+	font-size: 1em;
+}
+
+h5{
+	font-size: 0.9em;
+}
+
+h6{
+	font-size: 0.9em;
+}
+
+p.intro {
+	color: #004778;
+font-weight:normal;
+}
+
+
+.nobreak {white-space:nowrap;}
+	
+	
+fieldset{
+	float:left;
+}
+
+iframe{
+	margin:0 0 15px 0;	
+	max-width:100%;
+}
+ 
+input, textarea, button, select {
+	-webkit-border-radius:0; 
+	border-radius:0;
+	font-size:1em;
+	outline: none;
+	color:#7a7e82;
+	border:0px;
+}
+ 
+a{
+	color:#00008B;
+	text-decoration:underline;
+	-moz-transition: color linear 100ms;
+	-o-transition: color linear 100ms;
+	-webkit-transition: color linear 100ms;
+	transition: color linear 100ms;
+}
+
+a:hover,
+a:focus{
+	color: #663399;
+	text-decoration: none;
+	-moz-transition: color linear 100ms;
+	-o-transition: color linear 100ms;
+	-webkit-transition: color linear 100ms;
+	transition: color linear 100ms;
+}
+
+ul {
+	list-style-type: none;
+}
+
+b, 
+strong{
+	font-weight:bold; 
+}
+.small {
+	font-size:.9em;
+}
+fieldset {
+    border:0;
+    padding:0;
+    margin:0;
+}
+legend{
+    font-weight:bold;    
+    padding:0;
+    margin:0 0 20px 0 ;
+}
+
+
+.left {	float: left; }
+.right {float: right;}
+.mid {margin:0 auto;}
+.clear {float:none; clear:both;}
+
+img{
+	border:none;	
+	display: block; 
+}
+
+img.left { margin-right:15px; margin-bottom:10px;}
+img.right { margin-left:15px; margin-bottom:10px;}
+img.full { margin-bottom:15px;}
+
+sup, sub { vertical-align: 0; position: relative; }
+sup { bottom: 0.3em; }
+sub { top: 0.3em; }
+
+table{
+	width:100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom:15px;
+	clear: both;
+	border-bottom:1px solid #d3d3d3;
+}
+
+table tr td,
+table tr th{
+	border-top:1px solid #d3d3d3;
+	padding: 5px 10px 25px ;
+	text-align:left;
+	line-height: 1.1em;
+	vertical-align:top;
+	font-weight:normal;
+}
+table tr th{
+	border-right:1px solid #d3d3d3;
+	padding-left: 0px ;
+}
+
+figure{
+	float:left;
+	width:100%;
+}
+
+figure figcaption{
+	float:left;
+	margin:10px 0 0 0;
+	padding:0;
+	width:65%;
+}
+
+hr{
+	width:100%; 
+	clear: both;
+	display:block;
+	height:1px;
+	border:0;
+	background: #d4d4d4;
+	margin: 0 0 10px;
+}
+
+main ul {
+	list-style: none;
+}
+
+main ul li {
+	background: url(/build/images/bullet.gif) no-repeat 7px 7px transparent;
+	list-style-type: none;
+	margin: 0;
+	padding: 0px 0px 5px 25px;
+	background-size: 7px;
+}
+
+main ul li ul li {
+background: url(/build/images/bullet.gif) no-repeat 7px 6px transparent;
+background-size: 7px;
+}
+
+main ul li ul li ul li {
+background: url(/build/images/bullet.gif) no-repeat 7px 5px transparent;
+background-size: 7px;
+}
+
+main ul li ul {
+	padding-top: 8px;
+	margin-bottom: 0;
+}
+
+main ol{
+	counter-reset: item;
+	list-style-type: decimal;
+	margin-left: 5%;
+}
+
+main ol li{
+	list-style: inherit;
+	padding: 0 0 5px 0;
+}
+
+main ol li ol {
+	padding-top: 8px;
+	margin-bottom: 0;
+}
+
+main blockquote{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 1.2em;
+	line-height: 1.65em;
+	color: #003056;
+}
+
+main blockquote:before{
+	content:open-quote;
+	font-size: 1.5em;
+}
+
+main blockquote:after {
+	content:close-quote;
+	font-size: 1.5em;
+}
+
+main table {
+	width: 100%;
+}
+
+main table tr td, 
+main table tr th {
+	padding: 10px 2%;
+	vertical-align: middle;
+}
+
+main table tr th {
+	font-weight: bold;
+}
+
+main table tr {
+	border: 1px solid #d3d3d3;
+}
+
+main tr th {
+	border: none;
+}
+
+main caption {
+	margin-bottom: 10px;
+}
