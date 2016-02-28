@@ -29,7 +29,7 @@
 			<div class="contain">
 				<div class="site-title__container">
 					<div class="site-title">
-						<a href="#">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 							<h1 class="title">
 								<span class="capital-letter">S</span>imon 
 								<span class="capital-letter">M</span>uris <br/>
