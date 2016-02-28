@@ -406,9 +406,43 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 }
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
 
+
+
+
 /**** Adding fontawesome ****/
-function wmpudev_enqueue_icon_stylesheet() {
+function wmpudev_enqueue_icon_stylesheet() 
+{
 	wp_register_style( 'fontawesome', 'http:////maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
 	wp_enqueue_style( 'fontawesome');
 }
 add_action( 'wp_enqueue_scripts', 'wmpudev_enqueue_icon_stylesheet' );
+
+
+
+/**** Adding a new menu ****/
+function register_my_menu() 
+{
+  register_nav_menu('social-links',__( 'Social Links' ));
+}
+add_action( 'init', 'register_my_menu' );
+
+
+/**** Adding an image ****/
+function themeslug_theme_customizer( $wp_customize ) 
+{
+	$wp_customize->add_section( 'themeslug_logo_section' , array(
+	    'title'       => __( 'Logo', 'themeslug' ),
+	    'priority'    => 30,
+	    'description' => 'Upload a logo for the footer',
+	) );
+
+	$wp_customize->add_setting( 'themeslug_logo' );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_logo', array(
+	    'label'    => __( 'Logo', 'themeslug' ),
+	    'section'  => 'themeslug_logo_section',
+	    'settings' => 'themeslug_logo',
+	) ) );
+}
+add_action( 'customize_register', 'themeslug_theme_customizer' );
+
