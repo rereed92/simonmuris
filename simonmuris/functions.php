@@ -233,6 +233,7 @@ function enqueue_scripts() {
 	// wp_enqueue_style( 'twentysixteen-fonts', twentysixteen_fonts_url(), array(), null );
 
 	wp_enqueue_style( 'grid', get_template_directory_uri() . '/css/grid.css', array(), null );
+	wp_enqueue_style( 'style', get_stylesheet_uri());
 
 	// Add Genericons, used in the main stylesheet.
 	// wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
