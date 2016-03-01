@@ -23,17 +23,29 @@ module.exports = function(grunt) {
         }
       }
     },
+    postcss: {
+      options: {
+        map: false, // inline sourcemaps
+        processors: [
+          require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+        ]
+      },
+      dist: {
+        src: 'style.css',
+      }
+    },
     watch: {
       sass: {
         files: 'assets/sass/**/*.scss',
-        tasks: ['sass:dist'] //autoprefixer
+        tasks: ['sass:dist', 'postcss'] //autoprefixer
       },
     },
   });
 
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-postcss');
 
   // Default task(s). 'grunt'
-  grunt.registerTask('default', ['sass:dist']); //uglify goes here, autoprexier
+  grunt.registerTask('default', ['sass:dist', 'postcss']); //uglify goes here, autoprexier
 };
