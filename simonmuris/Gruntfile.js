@@ -10,7 +10,7 @@ module.exports = function(grunt) {
           sourcemap: 'none'
         },
         files: {                         // Dictionary of files
-          'style.css': 'assets/sass/main.scss'       // 'destination': 'source'
+          'style.css': 'assets/sass/styles/main.scss'       // 'destination': 'source'
         }
       },
       build: {                            // Target
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
           sourcemap: 'none'
         },
         files: {                         // Dictionary of files
-          'style.css': 'assets/sass/main.scss'       // 'destination': 'source'
+          'style.css': 'assets/sass/styles/main.scss'       // 'destination': 'source'
         }
       }
     },
