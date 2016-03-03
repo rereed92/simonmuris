@@ -2,9 +2,12 @@
 
 /** Settings **/
 @import 'settings/colors';
+@import 'settings/gutters';
+@import 'settings/breakpoints';
 
 /** Tools **/
 @import 'tools/colors';
+@import 'tools/grid';
 
 /** Generic **/
 @import 'generic/normalize';
@@ -14,7 +17,6 @@
 @import 'base/anchors';
 
 /** Objects **/
-@import 'objects/grid';
 
 /** Components **/
 

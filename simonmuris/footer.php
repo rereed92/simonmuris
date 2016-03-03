@@ -20,7 +20,7 @@
 
 				<div class="row row--vertical-align footer-contents">
 
-					<div class="col-sm-6 col-xs-12">
+					<div class="col-sm-12 col-md-6">
 						<div class="copyright table">
 							<div class="table--cell vertical--middle">
 								<img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' class="logo">
@@ -31,7 +31,7 @@
 						</div>
 					</div>
 
-					<div class="col-sm-6 col-xs-12">
+					<div class="col-sm-12 col-md-6">
 						<?php 
 							wp_nav_menu( array( 
 								'theme_location' => 'social-links',
