@@ -1,0 +1,13 @@
+a{
+	color: $black;
+	text-decoration: underline;
+	transition: color linear 100ms;
+
+	&:hover,
+	&:focus
+	{
+		color: $barleyCorn;
+		text-decoration: none;
+		transition: color linear 100ms;
+	}
+}

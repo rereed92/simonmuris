@@ -1,20 +1,21 @@
 @import 'base';
 
-/** Base **/
-@import 'base/body';
+/** Settings **/
+@import 'settings/colors';
 
-/** Components **/
+/** Tools **/
+@import 'tools/colors';
 
 /** Generic **/
 @import 'generic/normalize';
 
+/** Base **/
+@import 'base/body';
+@import 'base/anchors';
+
 /** Objects **/
 @import 'objects/grid';
 
-/** Settings **/
-@import 'colors/colors';
-
-/** Tools **/
-@import 'tools/colors';
+/** Components **/
 
 /** Trumps **/

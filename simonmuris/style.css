@@ -5,8 +5,8 @@ header {
   display: flex;
 }
 
-/** Base **/
-/** Components **/
+/** Settings **/
+/** Tools **/
 /** Generic **/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -403,7 +403,18 @@ th {
   padding: 0;
 }
 
+/** Base **/
+a {
+  color: #000;
+  text-decoration: underline;
+  transition: color linear 100ms;
+}
+a:hover, a:focus {
+  color: #a29061;
+  text-decoration: none;
+  transition: color linear 100ms;
+}
+
 /** Objects **/
-/** Settings **/
-/** Tools **/
+/** Components **/
 /** Trumps **/
