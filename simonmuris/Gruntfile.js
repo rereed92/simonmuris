@@ -38,7 +38,7 @@ module.exports = function(grunt) {
       sass: {
         files: 'assets/sass/**/*.scss',
         tasks: ['sass:dist', 'postcss'] //autoprefixer
-      },
+      }
     },
   });
 
