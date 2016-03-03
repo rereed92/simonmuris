@@ -1,0 +1,17 @@
+.content 
+{
+	padding: 285px 0 $gutter-super 0;
+	margin-bottom: 0;
+	background-color: $mercury;
+	min-height: 100vh;
+
+	&--sticky
+	{
+		padding-top: 160px;
+	}
+
+	&--homepage
+	{
+		background-color: $codGray;
+	}
+}

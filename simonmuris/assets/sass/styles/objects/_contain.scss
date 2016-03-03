@@ -1,0 +1,8 @@
+.contain 
+{
+	max-width: $breakpointDesktop;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 $gutter-super;
+    box-sizing: border-box;
+}
