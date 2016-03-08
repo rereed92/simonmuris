@@ -1,9 +1,14 @@
 @import 'base';
 
 /** Settings **/
+@import 'settings/borders';
+@import 'settings/border-radius';
 @import 'settings/breakpoints';
 @import 'settings/colors';
+@import 'settings/fonts';
+@import 'settings/font-sizes';
 @import 'settings/gutters';
+@import 'settings/timings';
 
 /** Tools **/
 @import 'tools/colors';
@@ -14,6 +19,7 @@
 /** Base **/
 @import 'base/anchors';
 @import 'base/body';
+@import 'base/headings';
 
 /** Objects **/
 @import 'objects/contain';
@@ -22,6 +28,14 @@
 @import 'objects/row';
 
 /** Components **/
+@import 'components/border';
 @import 'components/content';
+@import 'components/copyright';
+@import 'components/footer';
+@import 'components/header';
+@import 'components/navigation';
+@import 'components/title';
 
 /** Trumps **/
+@import 'trumps/table';
+@import 'trumps/vertical';

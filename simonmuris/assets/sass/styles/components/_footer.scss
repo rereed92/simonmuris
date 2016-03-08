@@ -1,0 +1,45 @@
+.footer
+{
+	background-color: $black;
+	padding: $gutter-super 0;
+
+	&__contents
+	{
+		padding-top: $gutter-large;
+	}
+
+	&__logo
+	{
+		margin: 0 $gutter-medium 0 0;
+		max-width: 85px;
+	}
+
+	&__links
+	{
+		margin: 0;
+		text-align: right;
+
+		& > li
+		{
+			display: inline-block;
+			margin-right: $gutter-large;
+
+			&:last-child
+			{
+				margin-right: 0;
+			}
+
+			& > a
+			{
+				color: $white;
+				font-size: $size-base;
+
+				&:hover
+				{
+					color: $barleyCorn;
+					transition: color linear $timings-linear;
+				}
+			}
+		}
+	}
+}

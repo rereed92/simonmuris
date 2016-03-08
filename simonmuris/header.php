@@ -21,48 +21,44 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<div class="site-inner">
-		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
-
+	<div class="container">
 		<header class="header">
 			<div class="contain">
-				<div class="site-title__container">
-					<div class="site-title">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-							<h1 class="title">
-								<span class="capital-letter">S</span>imon 
-								<span class="capital-letter">M</span>uris <br/>
-								<small class="opening-year">1972</small>
+				<div class="title">
+					<div class="title__content">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="title__link">
+							<h1 class="title__heading">
+								<span class="title__capital-letter">S</span>imon 
+								<span class="title__capital-letter">M</span>uris 
+								<br>
+								<small class="title__opening-year">1972</small>
 							</h1>
-
-							<?php $description = get_bloginfo( 'description', 'display' );
-							if ( $description || is_customize_preview() ) : ?>
-								<p class="site-description"><?php echo $description; ?></p>
-							<?php endif; ?>
-
 						</a>
 					</div>
-					<div class="small-navigation">
-						<div class="menu">
-							<span class="menu__bar"></span>
+
+					<div class="navigation">
+						<div class="navigation__small">
+							<div class="navigation__menu">
+								<span class="navigation__bar"></span>
+							</div>
 						</div>
+
+						<nav class="navigation__nav">
+							<?php
+								wp_nav_menu( array(
+									'theme_location' => 'primary',
+									'menu_class'     => 'navigation__list',
+								 ) );
+							?>
+						</nav>
 					</div>
-
-					<nav id="site-navigation" class="nav" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'twentysixteen' ); ?>">
-						<?php
-							wp_nav_menu( array(
-								'theme_location' => 'primary',
-								'menu_class'     => 'navigation',
-							 ) );
-						?>
-					</nav>
 				</div>
-
 			</div>
 
-			<div class="gold-border gold-border--bottom"></div>
+			<div class="border border__gold border__gold--bottom"></div>
+		</header>
+	</div>
 
-		</header><!-- .site-header -->
-
-		<div id="content" class="site-content">
+	<main class="content">
+		<div class="contain">
+	<!-- <div id="content" class="site-content"> -->

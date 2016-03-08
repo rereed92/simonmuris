@@ -10,44 +10,44 @@
  */
 ?>
 
-		</div><!-- .site-content -->
+		</div>
+	</main>
 
-		<footer class="footer">
+	<footer class="footer">
+		<div class="border border__gold border__gold--top"></div>
 
-			<div class="gold-border gold-border--top"></div>
-
-			<div class="contain">
-
-				<div class="row row--vertical-align footer-contents">
-
-					<div class="col-sm-12 col-md-6">
-						<div class="copyright table">
-							<div class="table--cell vertical--middle">
-								<img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' class="logo">
-							</div>
-							<div class="table--cell vertical--middle">
-								<p class="copyright-text">&copy; <?php echo date('Y'); ?> Simon Muris <span class="copyright-title">Designer Goldsmith</span></p>
-							</div>
+		<div class="contain">
+			<div class="row row--vertical-align footer__contents">
+				<div class="col-sm-12 col-md-6">
+					<div class="copyright table">
+						<div class="table__cell vertical__middle">
+							<img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' class="footer__logo">
+						</div>
+						<div class="table__cell vertical__middle">
+							<p class="copyright__text">&copy; <?php echo date('Y'); ?> 
+								Simon Muris 
+								<span class="copyright__title">Designer Goldsmith</span>
+							</p>
 						</div>
 					</div>
+				</div>
 
-					<div class="col-sm-12 col-md-6">
-						<?php 
-							wp_nav_menu( array( 
-								'theme_location' => 'social-links',
-								'menu_class'     => 'footer-links',
-							) ); 
-						?>
-					</div>
-
+				<div class="col-sm-12 col-md-6">
+					<?php 
+						wp_nav_menu( array( 
+							'theme_location' => 'social-links',
+							'menu_class'     => 'footer__links',
+						) ); 
+					?>
 				</div>
 
 			</div>
 
-		</footer>
+		</div>
 
-	</div><!-- .site-inner -->
-</div><!-- .site -->
+	</footer>
+
+</div>
 
 <?php wp_footer(); ?>
 </body>

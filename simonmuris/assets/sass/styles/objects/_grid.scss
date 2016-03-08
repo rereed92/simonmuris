@@ -91,7 +91,7 @@
     width: 8.33333333%
 }
 
-@media only screen and (max-width: $breakpointTablet) 
+@media only screen and (max-width: $breakpoint-tablet) 
 {
     .col-md-12 {
         width: 100%
@@ -142,7 +142,7 @@
     }
 }
 
-@media only screen and (max-width: $breakpointMobile) 
+@media only screen and (max-width: $breakpoint-mobile) 
 {
     .col-sm-12 {
         width: 100%

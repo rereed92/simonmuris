@@ -1,0 +1,40 @@
+.title
+{
+	max-height: inherit;
+    transition: all $timings-medium ease;
+
+    &__content
+    {
+    	text-align: center;
+    	margin-bottom: $gutter-extra-large;
+    }
+
+    &__heading
+    {
+    	margin: 0;
+    }
+
+    &__link
+    {
+    	display: block;
+    	text-decoration: none;
+
+    	&:hover,
+    	&:visited
+    	{
+    		display: block;
+    		text-decoration: none;
+    	}
+    }
+
+    &__capital-letter
+    {
+    	font-size: 1.25em;
+    	font-weight: 500;
+    }
+
+    &__opening-year
+    {
+    	display: block;
+    }
+}
