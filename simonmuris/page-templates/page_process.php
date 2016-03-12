@@ -3,12 +3,12 @@
 <?get_header(); ?>
 
 	<div class="row">
-		<div class="col-sm-12 process">
+		<div class="col-lg-12 process">
 			<div class="process__information">
 			</div>
 
 			<div class="process__background">
-				<img src="/simonmuris-html/images/hendecagon.png" alt="hendecagon">
+				<img src="<?php the_field('process_background_image'); ?>" alt="hendecagon">
 			</div>
 		</div>
 	</div>
