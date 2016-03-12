@@ -59,6 +59,6 @@
 		</header>
 	</div>
 
-	<main class="content">
+	<main class="content <?php page_class(); ?>">
 		<div class="contain">
 	<!-- <div id="content" class="site-content"> -->

@@ -452,3 +452,24 @@ add_action( 'customize_register', 'themeslug_theme_customizer' );
 
 wp_enqueue_style( $handle, $src, $deps, $ver, $media );
 
+
+
+/**** Adding a class if it is the front page ****/
+function page_class() { 
+	global $wp_query;
+
+	$page = '';
+
+	if (is_front_page() ) 
+	{
+       $page = 'content--homepage';
+	} 
+	// elseif (is_page()) {
+ //   	   $page = $wp_query->query_vars["pagename"];
+	// }
+	if ($page)
+	{
+		echo $page;
+	}
+}
+
