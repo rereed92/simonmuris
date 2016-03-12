@@ -1,0 +1,17 @@
+.quote
+{
+	position: absolute;
+	top: 35px;
+	left: 35px;
+	width: 300px;
+	z-index: 3;
+
+	&__author
+	{
+		color: $white;
+    	font-family: $quicksand;
+    	font-size: 0.8em;
+    	float: right;
+    	margin-right: 6%;
+	}
+}

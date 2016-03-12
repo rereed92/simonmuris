@@ -1,0 +1,26 @@
+blockquote
+{
+    font-family: $roboto;
+    font-weight: normal;
+    font-size: 1.2em;
+    line-height: 1.65em;
+    color: $white;
+    text-align: center;
+    margin: 0;
+
+    &:before
+    {
+    	content: '"';
+	    font-size: 1.5em;
+	    color: $white;
+	    margin-right: $gutter-extra-tiny;
+    }
+
+    &:after
+    {
+    	content: '"';
+	    font-size: 1.5em;
+	    color: $white;
+	    margin-left: $gutter-extra-tiny;
+    }
+}
