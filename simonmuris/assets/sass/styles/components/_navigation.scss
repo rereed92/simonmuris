@@ -10,11 +10,12 @@
 	{
 		margin: 0;
 		text-align: center;
+		padding: 0;
 
 		& > li
 		{
 			display: inline-block;
-			margin: 0 $gutter-extra-large;
+			margin: 0 $gutter-large;
 			font-family: $roboto;
 
 			& > a
@@ -107,3 +108,60 @@
 		}
 	}
 }
+
+
+@media only screen and (max-width: $breakpoint-mobile)
+{
+	.navigation
+	{
+		&__nav
+		{
+			max-height: 0;
+			overflow: hidden;
+			position: absolute;
+			top: 100px;
+			background: $black;
+			left: 0;
+			right: 0;
+			margin: 0;
+			padding: 0;
+			transition: max-height $timings-medium ease;
+
+			&--active
+			{
+				max-height: 700px;
+				transition: max-height $timings-medium ease;
+			}
+		}
+
+		&__list
+		{
+			padding: $gutter-large 0;
+			text-align: left;
+
+			& > li
+			{
+				display: block;
+				margin: 0 $gutter-super $gutter-small $gutter-super;
+
+				&:last-child
+				{
+					margin-bottom: 0;
+				}
+
+				& > a
+				{
+					display: block;
+				}
+			}
+		}
+
+		&__small
+		{
+			display: table-cell;
+			text-align: right;
+			width: 25%;
+			vertical-align: middle;
+		}
+	}
+} 

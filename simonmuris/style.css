@@ -770,10 +770,11 @@ h6 {
 .navigation__list {
   margin: 0;
   text-align: center;
+  padding: 0;
 }
 .navigation__list > li {
   display: inline-block;
-  margin: 0 25px;
+  margin: 0 20px;
   font-family: "Roboto Slab", serif;
 }
 .navigation__list > li > a {
@@ -843,6 +844,44 @@ h6 {
   top: auto;
 }
 
+@media only screen and (max-width: 650px) {
+  .navigation__nav {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 100px;
+    background: #000;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transition: max-height 0.4s ease;
+  }
+  .navigation__nav--active {
+    max-height: 700px;
+    transition: max-height 0.4s ease;
+  }
+  .navigation__list {
+    padding: 20px 0;
+    text-align: left;
+  }
+  .navigation__list > li {
+    display: block;
+    margin: 0 30px 10px 30px;
+  }
+  .navigation__list > li:last-child {
+    margin-bottom: 0;
+  }
+  .navigation__list > li > a {
+    display: block;
+  }
+  .navigation__small {
+    display: table-cell;
+    text-align: right;
+    width: 25%;
+    vertical-align: middle;
+  }
+}
 .title {
   max-height: inherit;
   transition: all 0.4s ease;
