@@ -12,3 +12,17 @@
 		display: block;
 	}
 }
+
+
+@media only screen and (max-width: $breakpoint-mobile)
+{
+	.copyright
+	{
+		display: block;
+
+		&__title
+		{
+			display: inline-block;
+		}		
+	}
+}

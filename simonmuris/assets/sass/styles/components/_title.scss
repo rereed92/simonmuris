@@ -3,6 +3,12 @@
 	max-height: inherit;
     transition: all $timings-medium ease;
 
+    &--sticky
+    {
+        max-height: 0;
+        transition: all $timings-medium ease;
+    }
+
     &__content
     {
     	text-align: center;
@@ -36,5 +42,42 @@
     &__opening-year
     {
     	display: block;
+    }
+}
+
+
+@media only screen and (max-width: $breakpoint-mobile)
+{
+    .title
+    {
+        display: table;
+        width: 100%;
+        margin-bottom: $gutter-large;
+        min-height: 52px;
+
+        &--sticky
+        {
+            max-height: inherit;
+            overflow: visible;
+        }
+
+        &__opening-year 
+        {
+            display: none;
+        }
+
+        &__capital-letter 
+        {
+            font-size: 1.05em;
+        }
+
+        &__content
+        {
+            display: table-cell;
+            text-align: left;
+            width: 75%;
+            margin-bottom: 0;
+            vertical-align: middle;
+        }
     }
 }
