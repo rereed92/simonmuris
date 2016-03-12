@@ -18,7 +18,7 @@
 
 		<div class="contain">
 			<div class="row row--vertical-align footer__contents">
-				<div class="col-sm-12 col-md-6">
+				<div class="col-sm-12 col-lg-6">
 					<div class="copyright table">
 						<div class="table__cell vertical__middle">
 							<img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' class="footer__logo">
@@ -32,7 +32,7 @@
 					</div>
 				</div>
 
-				<div class="col-sm-12 col-md-6">
+				<div class="col-sm-12 col-lg-6">
 					<?php 
 						wp_nav_menu( array( 
 							'theme_location' => 'social-links',
