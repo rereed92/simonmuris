@@ -61,4 +61,5 @@
 
 	<main class="content <?php page_class(); ?>">
 		<div class="contain">
+			<?php wpb_list_child_pages(); ?>
 	<!-- <div id="content" class="site-content"> -->

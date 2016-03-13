@@ -474,3 +474,21 @@ function page_class() {
 	}
 }
 
+
+function wpb_list_child_pages() { 
+
+	global $post; 
+
+	if ( is_page() && $post->post_parent )
+
+		$childPages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->post_parent . '&echo=0' );
+	else
+		$childPages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0' );
+
+	if ( $childPages ) {
+
+		$list = '<ul>' . $childPages . '</ul>';
+		echo $list;
+	}
+
+}
