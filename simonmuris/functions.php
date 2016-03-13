@@ -425,7 +425,8 @@ add_action( 'wp_enqueue_scripts', 'wmpudev_enqueue_icon_stylesheet' );
 /**** Adding a new menu ****/
 function register_my_menu() 
 {
-  register_nav_menu('social-links',__( 'Social Links' ));
+  	register_nav_menu('social-links',__( 'Social Links' ));
+  	register_nav_menu('contact-links',__( 'Contact Links' ));
 }
 add_action( 'init', 'register_my_menu' );
 
