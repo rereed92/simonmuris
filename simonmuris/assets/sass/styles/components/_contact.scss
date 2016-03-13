@@ -1,0 +1,64 @@
+.contact
+{
+	&__label
+	{
+		display: block;
+		width: 100%;
+		margin-bottom: $gutter-large;
+	}
+
+	&__input
+	{
+		display: block;
+		width: 100%;
+		margin-top: $gutter-tiny;
+		background-color: transparent;
+		border: $border-small solid $barleyCorn;
+		border-radius: $border-radius-medium;
+		padding: $gutter-extra-tiny $gutter-tiny;
+	    box-sizing: border-box;
+	    resize: none;
+	}
+
+	&__submit
+	{
+		display: inline-block;
+		width: auto;
+		cursor: pointer;
+		color: $black;
+		background-color: $coralReef;
+		border: $border-small solid $barleyCorn;
+		border-radius: $border-radius-medium;
+		padding: $gutter-tiny $gutter-large;
+	    box-sizing: border-box;
+		transition: background-color $timings-linear linear;
+
+		&:hover
+		{
+			background-color: $barleyCorn;
+			transition: background-color $timings-linear linear;
+		}
+	}
+
+	&__links
+	{
+		padding: 0;
+		text-align: left;
+
+		& > li
+		{
+			margin-right: $gutter-medium;
+			display: inline-block;
+			list-style: none;
+		}
+	}
+}
+
+#contact
+{
+	&__map 
+	{
+		height: 500px;
+		width: 100%;
+	}
+}

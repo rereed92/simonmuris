@@ -440,6 +440,8 @@ blockquote:after {
 body {
   width: 100%;
   position: relative;
+  font-family: "Quicksand", sans-serif;
+  color: #000;
 }
 
 h1 {
@@ -724,6 +726,64 @@ img {
 }
 .border__gold--bottom {
   border-bottom: 5px solid #a29061;
+}
+
+.box--bordered {
+  border: 1px solid #a29061;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+.box--margin-bottom {
+  margin-bottom: 30px;
+}
+
+.contact__label {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.contact__input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  background-color: transparent;
+  border: 1px solid #a29061;
+  border-radius: 6px;
+  padding: 3px 5px;
+  box-sizing: border-box;
+  resize: none;
+}
+.contact__submit {
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  color: #000;
+  background-color: #c5bca4;
+  border: 1px solid #a29061;
+  border-radius: 6px;
+  padding: 5px 20px;
+  box-sizing: border-box;
+  transition: background-color 100ms linear;
+}
+.contact__submit:hover {
+  background-color: #a29061;
+  transition: background-color 100ms linear;
+}
+.contact__links {
+  padding: 0;
+  text-align: left;
+}
+.contact__links > li {
+  margin-right: 15px;
+  display: inline-block;
+  list-style: none;
+}
+
+#contact__map {
+  height: 500px;
+  width: 100%;
 }
 
 .content {
@@ -1168,6 +1228,18 @@ img {
   }
 }
 /** Trumps **/
+.ajax-loader {
+  display: none;
+}
+
+.wpcf7-not-valid-tip {
+  margin-top: 10px;
+}
+
+.wpcf7-validation-errors {
+  border-color: #f00;
+}
+
 .table {
   display: table;
 }
@@ -1178,4 +1250,8 @@ img {
 
 .vertical__middle {
   vertical-align: middle;
+}
+
+.visually-hidden {
+  display: none;
 }

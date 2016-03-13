@@ -1,0 +1,16 @@
+.box
+{
+	&--bordered
+	{
+		border: $border-small solid $barleyCorn;
+		border-radius: $border-radius-large;
+		padding: $gutter-large;
+		background-color: $alabastar;
+	    box-sizing: border-box;
+	}
+
+	&--margin-bottom
+	{
+		margin-bottom: $gutter-super;
+	}
+}

@@ -31,6 +31,8 @@
 
 /** Components **/
 @import 'components/border';
+@import 'components/box';
+@import 'components/contact';
 @import 'components/content';
 @import 'components/copyright';
 @import 'components/footer';
@@ -43,5 +45,7 @@
 @import 'components/title';
 
 /** Trumps **/
+@import 'trumps/contact-form-7';
 @import 'trumps/table';
 @import 'trumps/vertical';
+@import 'trumps/visually-hidden';
