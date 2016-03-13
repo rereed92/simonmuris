@@ -487,7 +487,7 @@ function wpb_list_child_pages() {
 
 	if ( $childPages ) {
 
-		$list = '<ul>' . $childPages . '</ul>';
+		$list = '<ul class="tabs">' . $childPages . '</ul>';
 		echo $list;
 	}
 

@@ -1,0 +1,30 @@
+.tabs
+{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+
+	& > li
+	{
+		background: none;
+		padding: 0;
+		display: inline-block;
+		margin: 0 $gutter-medium $gutter-medium;
+
+		& > a
+		{
+			text-decoration: none;
+			font-weight: bold;
+			padding-bottom: $gutter-extra-tiny;
+			border-bottom: $border-medium solid transparent;
+			transition: border-bottom $timings-linear ease; 
+
+			&:hover
+			{
+				color: $black;
+				border-bottom: $border-medium solid $black;
+				transition: border-bottom $timings-linear ease;
+			}
+		}
+	}
+}

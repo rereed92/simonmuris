@@ -1171,6 +1171,30 @@ img {
   color: #a29061;
 }
 
+.tabs {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.tabs > li {
+  background: none;
+  padding: 0;
+  display: inline-block;
+  margin: 0 15px 15px;
+}
+.tabs > li > a {
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 100ms ease;
+}
+.tabs > li > a:hover {
+  color: #000;
+  border-bottom: 2px solid #000;
+  transition: border-bottom 100ms ease;
+}
+
 .title {
   max-height: inherit;
   transition: all 0.4s ease;
