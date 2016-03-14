@@ -492,3 +492,201 @@ function wpb_list_child_pages() {
 	}
 
 }
+
+
+
+
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_contact',
+		'title' => 'Contact',
+		'fields' => array (
+			array (
+				'key' => 'field_56e5587cb3bcc',
+				'label' => 'Contact Form Intro',
+				'name' => 'contact_form_intro',
+				'type' => 'text',
+				'instructions' => 'Introduction for the form',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_56e5527da36cd',
+				'label' => 'Contact Form',
+				'name' => 'contact_form',
+				'type' => 'wysiwyg',
+				'instructions' => 'This is the contact form created by \'Contact Form 7\'',
+				'default_value' => '',
+				'toolbar' => 'basic',
+				'media_upload' => 'no',
+			),
+			array (
+				'key' => 'field_56e5648b04222',
+				'label' => 'Contact Map',
+				'name' => 'contact_map',
+				'type' => 'google_map',
+				'center_lat' => '51.521327',
+				'center_lng' => '-0.108083',
+				'zoom' => 17,
+				'height' => '',
+			),
+			array (
+				'key' => 'field_56e56f71e7c27',
+				'label' => 'Contact Map Icon',
+				'name' => 'contact_map_icon',
+				'type' => 'image',
+				'save_format' => 'url',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_56e564c604223',
+				'label' => 'Contact Address',
+				'name' => 'contact_address',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'no',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page',
+					'operator' => '==',
+					'value' => '30',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_homepage-quote',
+		'title' => 'Homepage Quote',
+		'fields' => array (
+			array (
+				'key' => 'field_56e46423335d3',
+				'label' => 'Quote',
+				'name' => 'quote',
+				'type' => 'textarea',
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'formatting' => 'none',
+			),
+			array (
+				'key' => 'field_56e46452335d4',
+				'label' => 'Quote Author',
+				'name' => 'quote_author',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page',
+					'operator' => '==',
+					'value' => '2',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_process-background-image',
+		'title' => 'Process Background Image',
+		'fields' => array (
+			array (
+				'key' => 'field_56e457a31e558',
+				'label' => 'Process Background Image',
+				'name' => 'process_background_image',
+				'type' => 'image',
+				'instructions' => 'Only to be used on the process page',
+				'save_format' => 'url',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page',
+					'operator' => '==',
+					'value' => '11',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_signature-image',
+		'title' => 'Signature Image',
+		'fields' => array (
+			array (
+				'key' => 'field_56e45cb22992a',
+				'label' => 'Signature Image',
+				'name' => 'signature_image',
+				'type' => 'image',
+				'instructions' => 'For the signature image on the homepage',
+				'save_format' => 'url',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page',
+					'operator' => '==',
+					'value' => '2',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
