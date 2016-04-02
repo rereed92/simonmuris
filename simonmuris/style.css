@@ -1068,6 +1068,50 @@ img {
   border-radius: 50%;
   transition: border 100ms ease;
 }
+.process__image--1 {
+  top: -9%;
+  left: 42%;
+}
+.process__image--2 {
+  top: 0%;
+  left: 64%;
+}
+.process__image--3 {
+  top: 21%;
+  left: 77.5%;
+}
+.process__image--4 {
+  top: 48%;
+  left: 79%;
+}
+.process__image--5 {
+  top: 73%;
+  left: 71.5%;
+}
+.process__image--6 {
+  top: 88%;
+  left: 53%;
+}
+.process__image--7 {
+  top: 88%;
+  left: 31%;
+}
+.process__image--8 {
+  top: 73%;
+  left: 13%;
+}
+.process__image--9 {
+  top: 48%;
+  left: 4%;
+}
+.process__image--10 {
+  top: 21%;
+  left: 6%;
+}
+.process__image--11 {
+  top: -1%;
+  left: 20%;
+}
 .process__text {
   position: absolute;
   left: 0;
@@ -1078,11 +1122,78 @@ img {
   text-align: center;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  display: none;
 }
 .process__text--display {
   display: block;
 }
 
+@media only screen and (max-width: 850px) {
+  .process {
+    margin: 0;
+  }
+  .process__background {
+    display: none;
+  }
+  .process__information {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
+  .process__container {
+    display: table;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .process__container:last-child {
+    margin-bottom: 0;
+  }
+  .process__image, .process__image--active {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: table-cell;
+    vertical-align: middle;
+    width: 25%;
+  }
+  .process__image img, .process__image--active img {
+    max-width: 100%;
+    margin: 0 auto;
+    border: 5px solid #a29061;
+    box-sizing: border-box;
+  }
+  .process__text, .process__text--display {
+    padding-left: 20px;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@media only screen and (max-width: 850px) and (max-width: 650px) {
+  .process__container {
+    display: block;
+  }
+  .process__image, .process__image--active {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .process__image img, .process__image--active img {
+    max-width: 50%;
+    border-width: 2px;
+  }
+  .process__text, .process__text--display {
+    padding-left: 0;
+  }
+}
 .signature {
   margin-bottom: 30px;
 }

@@ -6,24 +6,29 @@
 		<div class="col-lg-12 process">
 			<div class="process__information">
 
-				<?php if( have_rows('process_content') ): ?>
+				<?php 
+					$i = 1;
+					if( have_rows('process_content') ):
+				?>
 
 					<?php while( have_rows('process_content') ): the_row(); 
 						$image = get_sub_field('process_image');
 						$content = get_sub_field('process_text');
-
 					?>
 						<div class="process__container">
-							<div class="process__image">
+							<div class="process__image process__image--<?php echo $i; ?> <?php if($i==1): ?> process__image--active <?php endif; ?>">
 								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
 							</div>
 
-							<div class="process__text">
+							<div class="process__text <?php if($i==1): ?> process__text--display <?php endif; ?>">
 								 <?php echo $content; ?>
 							</div>
 						</div>
 
-					<?php endwhile; ?>
+					<?php 
+						$i++;
+						endwhile; 
+					?>
 
 				<?php endif; ?>
 			</div>

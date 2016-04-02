@@ -51,6 +51,72 @@
 				transition: border $timings-linear ease;
 			}
 		}
+
+		&--1
+		{
+			top: -9%;
+			left: 42%;
+		}
+
+		&--2
+		{
+			top: 0%;
+			left: 64%;
+		}
+
+		&--3
+		{
+			top: 21%;
+			left: 77.5%;
+		}
+
+		&--4
+		{
+			top: 48%;
+			left: 79%;
+		}
+
+		&--5
+		{
+			top: 73%;
+			left: 71.5%;
+		}
+
+		&--6
+		{
+			top: 88%;
+			left: 53%;
+		}
+
+		&--7
+		{
+			top: 88%;
+			left: 31%;
+		}
+
+		&--8
+		{
+			top: 73%;
+			left: 13%;
+		}
+
+		&--9
+		{
+			top: 48%;
+			left: 4%;
+		}
+
+		&--10
+		{
+			top: 21%;
+			left: 6%;
+		}
+
+		&--11
+		{
+			top: -1%;
+			left: 20%;
+		}
 	}
 
 	&__text
@@ -63,11 +129,111 @@
 		width: 40%;
 		text-align: center;
 		transform: translateY(-50%);
+		display: none;
     	
-
     	&--display
     	{
     		display: block;
     	}
+	}
+}
+
+
+@media only screen and (max-width: $breakpoint-tablet)
+{
+	.process
+	{
+		margin: 0;
+
+		&__background
+		{
+			display: none;
+		}
+
+		&__information
+		{
+			position: relative;
+			top: auto;
+			bottom: auto;
+			left: auto;
+			right: auto;
+		}
+
+		&__container
+		{
+			display: table;
+			width: 100%;
+			margin-bottom: $gutter-super;
+
+			&:last-child
+			{
+				margin-bottom: 0;
+			}
+		}
+
+		&__image,
+		&__image--active
+		{
+			position: relative;
+			top: auto;
+			left: auto;
+			display: table-cell;
+			vertical-align: middle;
+			width: 25%;
+
+			img
+			{
+				max-width: 100%;
+				margin: 0 auto;
+				border: $border-large solid $barleyCorn;
+				box-sizing: border-box;
+			}
+		}
+
+		&__text,
+		&__text--display
+		{
+			padding-left: $gutter-large;
+			position: relative;
+			top: auto;
+			left: auto;
+			width: 100%;
+			display: table-cell;
+			text-align: left;
+			vertical-align: middle;
+			transform: translateY(0);
+		}
+	}
+
+
+	@media only screen and (max-width: $breakpoint-mobile)
+	{
+		.process
+		{
+			&__container
+			{
+				display: block;
+			}
+
+			&__image,
+			&__image--active
+			{
+				display: block;
+				width: 100%;
+				margin-bottom: $gutter-extra-large;
+
+				img
+				{
+					max-width: 50%;
+					border-width: $border-medium;
+				}
+			}
+
+			&__text,
+			&__text--display
+			{
+				padding-left: 0;
+			}
+		}
 	}
 }
