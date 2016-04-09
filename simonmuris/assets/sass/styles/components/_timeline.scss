@@ -1,0 +1,202 @@
+.timeline
+{
+	width: 90%;
+	margin: 0 auto;
+
+	&__list
+	{
+		position: relative;
+		padding: $gutter-super 0;
+		margin: 0;
+
+		&:before
+		{
+			content: '';
+		  	position: absolute;
+		  	top: 0;
+		  	bottom: 0;
+		  	left: 50%;
+		  	width: 3px;
+		  	background: $barleyCorn;
+		}
+	}
+
+	&__block
+	{
+		position: relative;
+		margin-bottom: $gutter-super-large;
+		display: block;
+
+		&:last-child
+		{
+			margin-bottom: 0;
+		}
+
+		&:after
+		{
+			content: '';
+			display: table;
+			clear: both;
+		}
+	}
+
+	&__marker
+	{
+		position: absolute;
+		top: 20px;
+		left: 50%;
+		width: 50px;
+		height: 50px;
+		margin-left: -$gutter-extra-large;
+		border-radius: $border-radius-circle;
+		background: $barleyCorn;
+
+		&:before
+		{
+			content: '';
+			position: absolute;
+			width: 25px;
+			height: 2px;
+			top: 50%;
+			background: $barleyCorn;
+		}
+
+		&--left
+		{
+			&:before
+			{
+				left: -10px;
+			}
+		}
+
+		&--right
+		{
+			&:before
+			{
+				right: -10px;
+			}
+		}
+	}
+
+	&__content
+	{
+		position: relative;
+		width: 45%;
+		border: $border-small solid $barleyCorn;
+		border-radius: $border-radius-large;
+		padding: $gutter-large;
+		background: $alabastar;
+		box-sizing: border-box;
+
+		&--left
+		{
+			float: left;
+		}
+
+		&--right
+		{
+			float: right;
+		}
+	}
+}
+
+
+.cssanimations 
+{
+	.timeline__marker
+	{
+		&--hidden
+		{
+			visibility: hidden;
+		}
+
+		&--bounce
+		{
+			visibility: visible;
+			animation: timeline-marker $timings-long;
+		}
+	}
+
+	.timeline__content
+	{
+		&--hidden
+		{
+			visibility: hidden;
+		}
+
+		&--bounce
+		{
+			visibility: visible;
+			animation: timeline-bounce $timings-long;
+		}
+
+		&--right
+		{
+			&--bounce
+			{
+				animation: timeline-bounce-inverse $timings-long;
+			}
+		}
+	}
+}
+
+
+@keyframes timeline-marker 
+{
+	0% 
+	{
+    	opacity: 0;
+    	transform: scale(0.5);
+  	}
+
+  	60% 
+  	{
+    	opacity: 1;
+    	transform: scale(1.1);
+  	}
+
+  	100% 
+  	{
+    	transform: scale(1);
+  	}
+}
+
+@keyframes timeline-bounce 
+{
+  	0% 
+  	{
+    	opacity: 0;
+    	transform: translateX(-100px);
+  	}
+
+  	60% 
+  	{
+    	opacity: 1;
+    	transform: translateX(10px);
+  	}
+
+  	100% 
+  	{
+    	transform: translateX(0);
+  	}
+}
+
+@keyframes timeline-bounce-inverse 
+{
+  	0% 
+  	{
+    	opacity: 0;
+    	transform: translateX(100px);
+  	}
+
+  	60% 
+  	{
+    	opacity: 1;
+    	transform: translateX(-10px);
+  	}
+
+  	100% 
+  	{
+    	transform: translateX(0);
+  	}
+}

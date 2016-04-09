@@ -1193,11 +1193,13 @@ textarea {
 
 
 /**** TIMELINE ****/
+/**** timeline ****/
 .timeline-container {
 	width: 90%;
 	margin: 0 auto;
 }
 
+/**** timeline__list ****/
 .timeline {
 	position: relative;
 	padding: 30px 0;
@@ -1222,6 +1224,7 @@ textarea {
 	margin-bottom: 0;
 }
 
+/**** timeline__marker ****/
 .timeline-image {
 	position: absolute;
   	top: 20px;

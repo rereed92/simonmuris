@@ -235,6 +235,8 @@ function enqueue_scripts() {
 	// wp_enqueue_style( 'grid', get_template_directory_uri() . '/css/grid.css', array(), null );
 	wp_enqueue_style( 'style', get_stylesheet_uri());
 
+	wp_enqueue_script( 'modernizer', get_template_directory_uri() . '/js/modernizer.js');
+
 	// Add Genericons, used in the main stylesheet.
 	// wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
 
