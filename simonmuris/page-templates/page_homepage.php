@@ -13,25 +13,21 @@
 
 				<div class="slideshow__content">
 					<ul class="slideshow__slides">
-						<li class="slideshow__slide">
-							<img src="/simonmuris-html/images/slide1.png" alt="slide" />
-						</li>
 
-						<li class="slideshow__slide">
-							<img src="/simonmuris-html/images/slide2.png" alt="slide" />
-						</li>
+						<?php if( have_rows('slideshow') ): ?>
 
-						<li class="slideshow__slide">
-							<img src="/simonmuris-html/images/slide5.png" alt="slide" />
-						</li>
+							<?php while( have_rows('slideshow') ): the_row(); 
+								$image = get_sub_field('slideshow_image');
+							?>
 
-						<li class="slideshow__slide">
-							<img src="/simonmuris-html/images/slide6.png" alt="slide" />
-						</li>
-						
-						<li class="slideshow__slide">
-							<img src="/simonmuris-html/images/slide7.png" alt="slide" />
-						</li>
+								<li class="slideshow__slide">
+									<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+								</li>
+
+							<?php endwhile; ?>
+
+						<?php endif; ?>
+
 					</ul>
 				</div>
 			</div>
