@@ -100,6 +100,85 @@
 	}
 }
 
+@media only screen and (max-width: $breakpoint-tablet)
+{
+	.timeline
+	{
+		width: 100%;
+
+		&__list
+		{
+			&:before
+			{
+				left: 25px;
+			}
+		}
+
+		&__marker
+		{
+			left: 0;
+			margin-left: 0;
+		}
+
+		&__content
+		{
+			float: none;
+			width: auto;
+			margin-left: 65px;
+		}
+
+		&__marker
+		{
+			&:before
+			{
+				left: auto;
+				right: -8px;
+			}
+		}
+	}
+
+	.cssanimations
+	{
+		.timeline__content
+		{
+			
+			&--right
+			{
+				&--bounce
+				{
+					animation: timeline-bounce $timings-long;
+				}
+			}
+		}
+	}
+}
+
+
+@media only screen and (max-width: $breakpoint-mobile)
+{
+	.timeline
+	{
+		&__list
+		{
+			&:before
+			{
+				left: 14px;
+			}
+		}
+
+		&__marker
+		{
+			width: 30px;
+			height: 30px;
+		}
+
+		&__content
+		{
+			margin-left: 45px;
+		}
+	}
+}
+
 
 .cssanimations 
 {
