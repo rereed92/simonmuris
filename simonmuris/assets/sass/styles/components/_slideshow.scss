@@ -95,3 +95,34 @@
 		}
 	}
 }
+
+
+@media only screen and (max-width: $breakpoint-tablet)
+{
+    .slideshow
+    {
+        margin-top: 130px;
+
+        &__slide
+        {
+            &:after
+            {
+                background: none;
+                width: 0;
+                left: auto;
+                right: auto;
+                top: auto;
+                bottom: auto;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: $breakpoint-mobile)
+{
+    .slideshow
+    {
+        margin-top: 160px;
+    }
+}

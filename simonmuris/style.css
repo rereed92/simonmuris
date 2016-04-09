@@ -1031,6 +1031,18 @@ img {
   margin-right: 6%;
 }
 
+@media only screen and (max-width: 850px) {
+  .quote {
+    top: -130px;
+    left: auto;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .quote {
+    top: -160px;
+  }
+}
 .process {
   position: relative;
   margin: 80px 0;
@@ -1282,6 +1294,24 @@ img {
   color: #a29061;
 }
 
+@media only screen and (max-width: 850px) {
+  .slideshow {
+    margin-top: 130px;
+  }
+  .slideshow__slide:after {
+    background: none;
+    width: 0;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .slideshow {
+    margin-top: 160px;
+  }
+}
 .tabs {
   margin: 0;
   padding: 0;
