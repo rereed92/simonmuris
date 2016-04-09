@@ -31,6 +31,7 @@
 					?>
 
 				<?php endif; ?>
+				
 			</div>
 
 			<div class="process__background">

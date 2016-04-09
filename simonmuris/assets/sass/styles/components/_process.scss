@@ -204,36 +204,36 @@
 			transform: translateY(0);
 		}
 	}
+}
 
 
-	@media only screen and (max-width: $breakpoint-mobile)
+@media only screen and (max-width: $breakpoint-mobile)
+{
+	.process
 	{
-		.process
+		&__container
 		{
-			&__container
-			{
-				display: block;
-			}
+			display: block;
+		}
 
-			&__image,
-			&__image--active
-			{
-				display: block;
-				width: 100%;
-				margin-bottom: $gutter-extra-large;
+		&__image,
+		&__image--active
+		{
+			display: block;
+			width: 100%;
+			margin-bottom: $gutter-extra-large;
 
-				img
-				{
-					max-width: 50%;
-					border-width: $border-medium;
-				}
-			}
-
-			&__text,
-			&__text--display
+			img
 			{
-				padding-left: 0;
+				max-width: 50%;
+				border-width: $border-medium;
 			}
+		}
+
+		&__text,
+		&__text--display
+		{
+			padding-left: 0;
 		}
 	}
 }
