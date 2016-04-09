@@ -906,7 +906,7 @@ img {
 .navigation__list > li {
   display: inline-block;
   margin: 0 20px;
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto", sans-serif;
 }
 .navigation__list > li > a {
   color: #fff;
@@ -1313,7 +1313,7 @@ img {
   }
 }
 .tabs {
-  margin: 0;
+  margin: 0 0 20px 0;
   padding: 0;
   text-align: center;
 }
@@ -1322,6 +1322,7 @@ img {
   padding: 0;
   display: inline-block;
   margin: 0 15px 15px;
+  font-family: "Roboto", sans-serif;
 }
 .tabs > li > a {
   text-decoration: none;
@@ -1396,7 +1397,7 @@ img {
   width: 45%;
   border: 1px solid #a29061;
   border-radius: 10px;
-  padding: 20px;
+  padding: 0 20px;
   background: #fafafa;
   box-sizing: border-box;
 }
