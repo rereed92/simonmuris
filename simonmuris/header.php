@@ -23,7 +23,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 </head>
 
-<body <?php body_class(); ?>>
+<body>
 	<div class="container">
 		<header class="header">
 			<div class="contain">
