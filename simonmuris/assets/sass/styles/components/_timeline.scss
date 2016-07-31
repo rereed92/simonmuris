@@ -142,12 +142,10 @@
 		.timeline__content
 		{
 			
-			&--right
+			&--right.timelne__content--bounce
 			{
-				&--bounce
-				{
-					animation: timeline-bounce $timings-long;
-				}
+				visibility: visible;
+				animation: timeline-bounce $timings-long;
 			}
 		}
 	}
@@ -203,18 +201,16 @@
 			visibility: hidden;
 		}
 
-		&--bounce
+		&--left.timeline__content--bounce
 		{
 			visibility: visible;
 			animation: timeline-bounce $timings-long;
 		}
 
-		&--right
+		&--right.timeline__content--bounce
 		{
-			&--bounce
-			{
-				animation: timeline-bounce-inverse $timings-long;
-			}
+			visibility: visible;
+			animation: timeline-bounce-inverse $timings-long;
 		}
 	}
 }
