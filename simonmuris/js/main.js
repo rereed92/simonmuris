@@ -20,14 +20,14 @@ $j(function()
  //        });
  //    }
 	
-	// $('.slideshow').slideshowFade();	
-	// var imageHeight = $('.slideshow-slide img').height();
-	// $('.slideshow').height(imageHeight);
+	$j('.slideshow').slideshowFade();	
+	var imageHeight = $j('.slideshow__image').height();
+	$j('.slideshow').height(imageHeight);
 
-	// $(window).resize(function() {
-	// 	var imageHeight = $('.slideshow-slide img').height();
-	// 	$('.slideshow').height(imageHeight);
-	// });
+	$j(window).resize(function() {
+		var imageHeight = $j('.slideshow__image').height();
+		$j('.slideshow').height(imageHeight);
+	});
 
 
 	$j('.process__image').hover(function() {
