@@ -21,7 +21,7 @@
 							?>
 
 								<li class="slideshow__slide">
-									<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+									<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" class="slideshow__image" />
 								</li>
 
 							<?php endwhile; ?>
