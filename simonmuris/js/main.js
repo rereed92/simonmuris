@@ -19,7 +19,8 @@ $j(function()
  //            closeIcon: '<i class="fa fa-times-circle"></i>'
  //        });
  //    }
-	
+	$j('.gallery').lightbox();	
+
 	$j('.slideshow').slideshowFade();	
 	var imageHeight = $j('.slideshow__image').height();
 	$j('.slideshow').height(imageHeight);
