@@ -239,6 +239,7 @@ function enqueue_scripts() {
 	wp_enqueue_script( 'modernizer', get_template_directory_uri() . '/js/modernizer.js');
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js');
 	wp_enqueue_script( 'slideshow', get_template_directory_uri() . '/js/slideshow.js');
+	wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox.js');
 
 	// Add Genericons, used in the main stylesheet.
 	// wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
@@ -490,7 +491,17 @@ function page_class() {
 	}
 }
 
-// add_filter('wp_list_pages', create_function('$t', 'return str_replace("<li ", "<li class=\"tab\" ", $t);'));
+// add_filter('wp_list_pages' , 'tab_class' , 10 , 2);
+// function tab_class($classes, $item)
+// {
+// 	echo($classes);
+//     if( in_array('current_page_item', $classes) || in_array('current_page_ancestor', $classes) )
+//     {
+// 		$classes[] = 'tabs__tab--active';
+//     }
+// }
+
+add_filter('wp_list_pages', create_function('$t', 'return str_replace("<li ", "<li class=\"tabs__tab\" ", $t);'));
 function wpb_list_child_pages() { 
 
 	global $post; 
@@ -512,4 +523,8 @@ function wpb_list_child_pages() {
 	}
 
 }
+
+
+
+
 
