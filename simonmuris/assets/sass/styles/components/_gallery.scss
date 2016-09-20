@@ -1,13 +1,16 @@
 .gallery
 {
-	padding: 0;
-	margin: 0;
-
-	&:after
+	&__items
 	{
-		content: '';
-		display: block;
-		clear: both;
+		padding: 0;
+		margin: 0;
+
+		&:after
+		{
+			content: '';
+			display: block;
+			clear: both;
+		}
 	}
 
 	&__item
