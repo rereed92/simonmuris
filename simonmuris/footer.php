@@ -49,6 +49,26 @@
 
 </div>
 
+<div class="lightbox">
+	<div class="contain lightbox__contain">
+
+		<a href="#" class="lightbox__close"><i class="fa fa-close"></i></a>
+
+		<div class="lightbox__canvas">
+		</div>
+
+		<ul class="lightbox__controls">
+			<li class="lightbox__control-arrow lightbox__control-arrow--previous">
+	    		<a href="#" class="lightbox__control lightbox__control--previous"><i class="fa fa-chevron-left"></i></a>
+	    	</li>
+
+	    	<li class="lightbox__control-arrow lightbox__control-arrow--next">
+	    		<a href="#" class="lightbox__control lightbox__control--next"><i class="fa fa-chevron-right"></i></a>
+	    	</li>
+		</ul>
+	</div>
+</div>
+
 <?php wp_footer(); ?>
 </body>
 </html>
