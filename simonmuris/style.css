@@ -865,11 +865,11 @@ img {
     margin-top: 20px;
   }
 }
-.gallery {
+.gallery__items {
   padding: 0;
   margin: 0;
 }
-.gallery:after {
+.gallery__items:after {
   content: '';
   display: block;
   clear: both;
@@ -914,6 +914,105 @@ img {
     top: auto;
     padding: 20px 0;
     position: relative;
+  }
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  color: #fff;
+  background-color: #191919;
+  background-color: rgba(25, 25, 25, 0.9);
+}
+.lightbox--display {
+  display: block;
+}
+.lightbox__contain {
+  position: relative;
+  height: 100%;
+}
+.lightbox__canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.lightbox__close {
+  font-size: 30px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+  z-index: 1;
+}
+.lightbox__controls {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  right: 30px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.lightbox__controls:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.lightbox__control-arrow {
+  display: inline-block;
+  font-size: 30px;
+}
+.lightbox__control-arrow--previous {
+  float: left;
+}
+.lightbox__control-arrow--next {
+  float: right;
+}
+.lightbox__control {
+  color: #fff;
+}
+.lightbox__control--disabled {
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+.lightbox__image {
+  margin: 0 auto;
+  max-width: 60%;
+  max-height: 80%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 850px) {
+  .lightbox__close {
+    top: 25px;
+    right: 25px;
+  }
+  .lightbox__controls {
+    left: 25px;
+    right: 25px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .lightbox__close {
+    top: 20px;
+    right: 20px;
+  }
+  .lightbox__controls {
+    left: 20px;
+    right: 20px;
   }
 }
 .navigation__nav {
@@ -1344,21 +1443,21 @@ img {
   padding: 0;
   text-align: center;
 }
-.tabs > li {
+.tabs__tab {
   background: none;
   padding: 0;
   display: inline-block;
   margin: 0 15px 15px;
   font-family: "Roboto", sans-serif;
 }
-.tabs > li > a {
+.tabs__tab > a {
   text-decoration: none;
   font-weight: bold;
   padding-bottom: 3px;
   border-bottom: 2px solid transparent;
   transition: border-bottom 100ms ease;
 }
-.tabs > li > a:hover {
+.tabs__tab > a:hover {
   color: #000;
   border-bottom: 2px solid #000;
   transition: border-bottom 100ms ease;
@@ -1435,45 +1534,6 @@ img {
   float: right;
 }
 
-@media only screen and (max-width: 850px) {
-  .timeline {
-    width: 100%;
-  }
-  .timeline__list:before {
-    left: 25px;
-  }
-  .timeline__marker {
-    left: 0;
-    margin-left: 0;
-  }
-  .timeline__content {
-    float: none;
-    width: auto;
-    margin-left: 65px;
-  }
-  .timeline__marker:before {
-    left: auto;
-    right: -8px;
-  }
-
-  .cssanimations .timeline__content--right.timelne__content--bounce {
-    visibility: visible;
-    -webkit-animation: timeline-bounce 0.6s;
-            animation: timeline-bounce 0.6s;
-  }
-}
-@media only screen and (max-width: 650px) {
-  .timeline__list:before {
-    left: 14px;
-  }
-  .timeline__marker {
-    width: 30px;
-    height: 30px;
-  }
-  .timeline__content {
-    margin-left: 45px;
-  }
-}
 .cssanimations .timeline__marker--hidden {
   visibility: hidden;
 }
@@ -1496,6 +1556,45 @@ img {
           animation: timeline-bounce-inverse 0.6s;
 }
 
+@media only screen and (max-width: 850px) {
+  .timeline {
+    width: 100%;
+  }
+  .timeline__list:before {
+    left: 25px;
+  }
+  .timeline__marker {
+    left: 0;
+    margin-left: 0;
+  }
+  .timeline__content {
+    float: none;
+    width: auto;
+    margin-left: 65px;
+  }
+  .timeline__marker:before {
+    left: auto;
+    right: -8px;
+  }
+
+  .cssanimations .timeline__content--right.timeline__content--bounce {
+    visibility: visible;
+    -webkit-animation: timeline-bounce 0.6s;
+            animation: timeline-bounce 0.6s;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .timeline__list:before {
+    left: 14px;
+  }
+  .timeline__marker {
+    width: 30px;
+    height: 30px;
+  }
+  .timeline__content {
+    margin-left: 45px;
+  }
+}
 @-webkit-keyframes timeline-marker {
   0% {
     opacity: 0;
@@ -1512,7 +1611,6 @@ img {
             transform: scale(1);
   }
 }
-
 @keyframes timeline-marker {
   0% {
     opacity: 0;
