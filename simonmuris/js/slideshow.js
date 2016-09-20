@@ -24,8 +24,6 @@ var $j = jQuery.noConflict();
 
         var init = function () {
 
-        	console.log('slideshow');
-
             if (defaults.pagination) {
                 $jcontainer.append('<div class="slideshow__pagination"><ul class="slideshow__buttons"></ul></div>');
                 $jcontainer.find('.slideshow__slide').each(function (index) {
