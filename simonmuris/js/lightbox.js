@@ -35,6 +35,12 @@ var $j = jQuery.noConflict();
             $j('.lightbox__control--next').click(function (e) {
                 return nextImage(e, $j(this));
             });
+
+            $j(document).keyup(function(e) {
+                if (e.keyCode === 39) return nextImage(e, $j(this));
+                if (e.keyCode === 37) return previousImage(e, $j(this));
+                if (e.keyCode === 27) return hideLightbox(e);
+            }); 
         };
 
         var displayLightbox = function(e, link) {
@@ -59,7 +65,9 @@ var $j = jQuery.noConflict();
 		{
             e.preventDefault();
 
-            index--;
+            if (index <= 0) index = index;
+            else index--;
+
             enableControls();
 
             var src = $j('.gallery__item').eq(index).find('.gallery__link').attr('href');
@@ -70,7 +78,9 @@ var $j = jQuery.noConflict();
         {
             e.preventDefault();
 
-            index++;
+            if (index >= ($j('.gallery__item').length - 1)) index = index;
+            else index++;
+
             enableControls();
 
             var src = $j('.gallery__item').eq(index).find('.gallery__link').attr('href');
