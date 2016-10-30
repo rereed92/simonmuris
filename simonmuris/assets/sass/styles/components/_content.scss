@@ -4,10 +4,12 @@
 	margin-bottom: 0;
 	background-color: $mercury;
 	min-height: 100vh;
+	transition: padding $timings-medium ease-in-out;
 
 	&--sticky
 	{
 		padding-top: 160px;
+		transition: padding $timings-medium ease-in-out;
 	}
 
 	&--homepage
@@ -17,7 +19,7 @@
 }
 
 
-@media only screen and (max-width: $breakpoint-mobile)
+@media only screen and (max-width: $breakpoint-tablet)
 {
 	.content
 	{
@@ -25,7 +27,7 @@
 
 		&--sticky
 		{
-			padding-top: 0;
+			padding-top: $gutter-super;
 		}
 	}
 }

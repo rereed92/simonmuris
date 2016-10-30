@@ -27,5 +27,13 @@
 				transition: border-bottom $timings-linear ease;
 			}
 		}
+
+		&--active
+		{
+			& > a
+			{
+				border-bottom: $border-medium solid $black;
+			}
+		}
 	}
 }

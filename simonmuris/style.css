@@ -403,14 +403,21 @@ th {
   padding: 0;
 }
 
+div.wpcf7-validation-errors {
+  border: 1px solid #FF0000;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 25px 0 0;
+}
+
 /** Base **/
 a {
-  color: #000;
+  color: #000000;
   text-decoration: underline;
   transition: color linear 100ms;
 }
 a:hover, a:focus {
-  color: #a29061;
+  color: #A29061;
   text-decoration: none;
   transition: color linear 100ms;
 }
@@ -420,34 +427,35 @@ blockquote {
   font-weight: normal;
   font-size: 1.2em;
   line-height: 1.65em;
-  color: #fff;
+  color: #FFFFFF;
   text-align: center;
   margin: 0;
 }
 blockquote:before {
   content: '"';
   font-size: 1.5em;
-  color: #fff;
+  color: #FFFFFF;
   margin-right: 3px;
 }
 blockquote:after {
   content: '"';
   font-size: 1.5em;
-  color: #fff;
+  color: #FFFFFF;
   margin-left: 3px;
 }
 
 body {
   width: 100%;
+  min-width: 320px;
   position: relative;
   font-family: "Quicksand", sans-serif;
-  color: #000;
+  color: #000000;
 }
 
 h1 {
   font-size: 3em;
   line-height: 1.1em;
-  color: #a29061;
+  color: #A29061;
   font-family: "Roboto Slab", serif;
   font-variant: small-caps;
   letter-spacing: 0.05em;
@@ -456,7 +464,7 @@ h1 {
 
 h2 {
   font-size: 1.4em;
-  color: #a29061;
+  color: #A29061;
   font-family: "Quicksand", sans-serif;
 }
 
@@ -497,7 +505,7 @@ img {
 }
 
 .container {
-  background-color: #e8e8e8;
+  background-color: #E8E8E8;
 }
 
 .col-lg-1,
@@ -722,17 +730,17 @@ img {
   width: 100%;
 }
 .border__gold--top {
-  border-top: 5px solid #a29061;
+  border-top: 5px solid #A29061;
 }
 .border__gold--bottom {
-  border-bottom: 5px solid #a29061;
+  border-bottom: 5px solid #A29061;
 }
 
 .box--bordered {
-  border: 1px solid #a29061;
+  border: 1px solid #A29061;
   border-radius: 10px;
   padding: 20px;
-  background-color: #fafafa;
+  background-color: #FAFAFA;
   box-sizing: border-box;
 }
 .box--margin-bottom {
@@ -749,7 +757,7 @@ img {
   width: 100%;
   margin-top: 5px;
   background-color: transparent;
-  border: 1px solid #a29061;
+  border: 1px solid #A29061;
   border-radius: 6px;
   padding: 3px 5px;
   box-sizing: border-box;
@@ -759,16 +767,16 @@ img {
   display: inline-block;
   width: auto;
   cursor: pointer;
-  color: #000;
-  background-color: #c5bca4;
-  border: 1px solid #a29061;
+  color: #000000;
+  background-color: #C5BCA4;
+  border: 1px solid #A29061;
   border-radius: 6px;
   padding: 5px 20px;
   box-sizing: border-box;
   transition: background-color 100ms linear;
 }
 .contact__submit:hover {
-  background-color: #a29061;
+  background-color: #A29061;
   transition: background-color 100ms linear;
 }
 .contact__links {
@@ -789,28 +797,30 @@ img {
 .content {
   padding: 285px 0 30px 0;
   margin-bottom: 0;
-  background-color: #e8e8e8;
+  background-color: #E8E8E8;
   min-height: 100vh;
+  transition: padding 0.4s ease-in-out;
 }
 .content--sticky {
   padding-top: 160px;
+  transition: padding 0.4s ease-in-out;
 }
 .content--homepage {
   background-color: #191919;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 850px) {
   .content {
     padding-top: 30px;
   }
   .content--sticky {
-    padding-top: 0;
+    padding-top: 30px;
   }
 }
 .copyright__text {
   margin: 0;
   font-family: "Roboto Slab", serif;
-  color: #fff;
+  color: #FFFFFF;
 }
 .copyright__title {
   display: block;
@@ -825,7 +835,7 @@ img {
   }
 }
 .footer {
-  background-color: #000;
+  background-color: #000000;
   padding: 30px 0;
 }
 .footer__contents {
@@ -848,11 +858,11 @@ img {
   margin-right: 0;
 }
 .footer__links > li > a {
-  color: #fff;
+  color: #FFFFFF;
   font-size: 16px;
 }
 .footer__links > li > a:hover {
-  color: #a29061;
+  color: #A29061;
   transition: color linear 100ms;
 }
 
@@ -888,7 +898,7 @@ img {
 }
 
 .header {
-  background-color: #000;
+  background-color: #000000;
   padding: 30px 0;
   position: fixed;
   top: 0;
@@ -904,7 +914,7 @@ img {
   transition: all 0.4s ease-in-out;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 850px) {
   .header {
     padding: 20px 0;
     height: auto;
@@ -924,7 +934,7 @@ img {
   right: 0;
   bottom: 0;
   z-index: 1000;
-  color: #fff;
+  color: #FFFFFF;
   background-color: #191919;
   background-color: rgba(25, 25, 25, 0.9);
 }
@@ -949,7 +959,7 @@ img {
   position: absolute;
   top: 30px;
   right: 30px;
-  color: #fff;
+  color: #FFFFFF;
   z-index: 1;
 }
 .lightbox__controls {
@@ -978,7 +988,7 @@ img {
   float: right;
 }
 .lightbox__control {
-  color: #fff;
+  color: #FFFFFF;
 }
 .lightbox__control--disabled {
   pointer-events: none;
@@ -1028,17 +1038,17 @@ img {
   display: inline-block;
   padding: 0 20px;
   font-family: "Roboto", sans-serif;
-  color: #fff;
+  color: #FFFFFF;
 }
 .navigation__link--active {
-  color: #a29061;
+  color: #A29061;
 }
 .navigation__link > a {
   color: inherit;
   text-decoration: none;
 }
 .navigation__link > a:hover {
-  color: #a29061;
+  color: #A29061;
   transition: color linear 100ms;
 }
 .navigation__small {
@@ -1065,7 +1075,7 @@ img {
   margin: 0 auto;
   width: 30px;
   height: 2px;
-  background: #a29061;
+  background: #A29061;
   position: absolute;
   top: 50%;
   left: 0;
@@ -1086,13 +1096,13 @@ img {
   margin-top: 9px;
 }
 .navigation__bar--active {
-  background: #a29061;
+  background: #A29061;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   transition: all 0.2s ease;
 }
 .navigation__bar--active:before, .navigation__bar--active:after {
-  background: #a29061;
+  background: #A29061;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   transition: all 0.2s ease;
@@ -1100,7 +1110,7 @@ img {
   top: auto;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 850px) {
   .navigation {
     display: table-cell;
     text-align: right;
@@ -1112,7 +1122,7 @@ img {
     overflow: hidden;
     position: absolute;
     top: 100px;
-    background: #000;
+    background: #000000;
     left: 0;
     right: 0;
     margin: 0;
@@ -1149,7 +1159,7 @@ img {
   z-index: 3;
 }
 .quote__author {
-  color: #fff;
+  color: #FFFFFF;
   font-family: "Quicksand", sans-serif;
   font-size: 0.8em;
   float: right;
@@ -1201,7 +1211,7 @@ img {
   transition: border 100ms ease;
 }
 .process__image--active img {
-  border: 5px solid #a29061;
+  border: 5px solid #A29061;
   border-radius: 50%;
   transition: border 100ms ease;
 }
@@ -1298,7 +1308,7 @@ img {
   .process__image img, .process__image--active img {
     max-width: 100%;
     margin: 0 auto;
-    border: 5px solid #a29061;
+    border: 5px solid #A29061;
     box-sizing: border-box;
   }
   .process__text, .process__text--display {
@@ -1406,8 +1416,8 @@ img {
   display: inline-block;
   margin: 0 5px;
   background: none;
-  background-color: #fff;
-  color: #fff;
+  background-color: #FFFFFF;
+  color: #FFFFFF;
   border-radius: 50%;
   width: 15px;
   height: 15px;
@@ -1416,8 +1426,8 @@ img {
   padding: 0;
 }
 .slideshow__button--active {
-  background-color: #a29061;
-  color: #a29061;
+  background-color: #A29061;
+  color: #A29061;
 }
 
 @media only screen and (max-width: 850px) {
@@ -1436,6 +1446,9 @@ img {
 @media only screen and (max-width: 650px) {
   .slideshow {
     margin-top: 160px;
+  }
+  .slideshow__slides {
+    margin-top: 10px;
   }
 }
 .tabs {
@@ -1458,9 +1471,12 @@ img {
   transition: border-bottom 100ms ease;
 }
 .tabs__tab > a:hover {
-  color: #000;
-  border-bottom: 2px solid #000;
+  color: #000000;
+  border-bottom: 2px solid #000000;
   transition: border-bottom 100ms ease;
+}
+.tabs__tab--active > a {
+  border-bottom: 2px solid #000000;
 }
 
 .timeline {
@@ -1479,7 +1495,7 @@ img {
   bottom: 0;
   left: 50%;
   width: 3px;
-  background: #a29061;
+  background: #A29061;
 }
 .timeline__block {
   position: relative;
@@ -1502,7 +1518,7 @@ img {
   height: 50px;
   margin-left: -25px;
   border-radius: 50%;
-  background: #a29061;
+  background: #A29061;
 }
 .timeline__marker:before {
   content: '';
@@ -1510,7 +1526,7 @@ img {
   width: 25px;
   height: 2px;
   top: 50%;
-  background: #a29061;
+  background: #A29061;
 }
 .timeline__marker--left:before {
   left: -10px;
@@ -1521,10 +1537,10 @@ img {
 .timeline__content {
   position: relative;
   width: 45%;
-  border: 1px solid #a29061;
+  border: 1px solid #A29061;
   border-radius: 10px;
   padding: 0 20px;
-  background: #fafafa;
+  background: #FAFAFA;
   box-sizing: border-box;
 }
 .timeline__content--left {
@@ -1722,7 +1738,7 @@ img {
   display: block;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 850px) {
   .title {
     display: table;
     width: 100%;

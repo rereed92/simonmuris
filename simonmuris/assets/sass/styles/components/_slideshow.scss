@@ -125,5 +125,10 @@
     .slideshow
     {
         margin-top: 160px;
+
+        &__slides
+        {
+            margin-top: 10px;
+        }
     }
 }

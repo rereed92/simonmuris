@@ -491,19 +491,17 @@ function page_class() {
 	}
 }
 
-// add_filter('wp_list_pages' , 'tab_class' , 10 , 2);
-// function tab_class($classes, $item)
-// {
-// 	echo($classes);
-//     if( in_array('current_page_item', $classes) || in_array('current_page_ancestor', $classes) )
-//     {
-// 		$classes[] = 'tabs__tab--active';
-//     }
-// }
 
-add_filter('wp_list_pages', create_function('$t', 'return str_replace("<li ", "<li class=\"tabs__tab\" ", $t);'));
-function wpb_list_child_pages() { 
+function clean_wp_list_pages($menu) {
+	$menu = preg_replace('/class="(.*?)current_page(.*?)"/','class="tabs__tab tabs__tab--active"',$menu);
+	$menu = preg_replace('/ class="(.*?)page_item(.*?)(.*?)page-item(.*?)(?!tabs__tab--active).*?\1"/',' class="tabs__tab"',$menu);
+	return $menu;
+}
+add_filter( 'wp_list_pages', 'clean_wp_list_pages' );
 
+
+function wpb_list_child_pages() 
+{ 
 	global $post; 
 
 	if ( is_page() && $post->post_parent )
@@ -522,6 +520,14 @@ function wpb_list_child_pages() {
 		echo $list;
 	}
 
+}
+
+
+add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1);
+add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1);
+
+function my_css_attributes_filter($var) {
+  return is_array($var) ? array_intersect($var, array('navigation__link', 'navigation__link--active', 'tabs__tab', 'tabs__tab--active')) : '';
 }
 
 
