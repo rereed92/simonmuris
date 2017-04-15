@@ -48,7 +48,6 @@ var $j = jQuery.noConflict();
 
             document.querySelector('body').addEventListener('touchstart', function(e) {
                 if (e.target.className === 'lightbox__image') {
-                    console.log('ahhh');
                     touchstartX = e.changedTouches[0].screenX;
                     touchstartY = e.changedTouches[0].screenY;
                 }
@@ -56,30 +55,15 @@ var $j = jQuery.noConflict();
 
             document.querySelector('body').addEventListener('touchend', function(e) {
                 if (e.target.className === 'lightbox__image') {
-                    console.log("boooo");
                     touchendX = e.changedTouches[0].screenX;
                     touchendY = e.changedTouches[0].screenY;
                     handleSwipe(e);
                 }
             });
-
-            // $j('.lightbox__image').addEventListener('touchstart', function(e) {
-            //     console.log("blah");
-            //     touchstartX = e.screenX;
-            //     touchstartY = e.screenY;
-            // }, false);
-
-            // $j('.lightbox__image').addEventListener('touchend', function(e) {
-            //     touchendX = e.screenX;
-            //     touchendY = e.screenY;
-            //     handleSwipe(e);
-            // }, false); 
         };
 
         var handleSwipe = function(e) {
-            console.log("sdgh");
             if (touchendX < touchstartX) {
-                console.log("yo");
                 return nextImage(e, $j(this)); 
             }
             
