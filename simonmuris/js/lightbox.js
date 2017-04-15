@@ -18,6 +18,10 @@ var $j = jQuery.noConflict();
         var $jcontainer = $j(this);
         var index = 0;
         var timer;
+        var touchstartX = 0;
+        var touchstartY = 0;
+        var touchendX = 0;
+        var touchendY = 0;
 
         var init = function () {	
 			$j('.gallery__link').click(function (e) {
@@ -41,12 +45,54 @@ var $j = jQuery.noConflict();
                 if (e.keyCode === 37) return previousImage(e, $j(this));
                 if (e.keyCode === 27) return hideLightbox(e);
             }); 
+
+            document.querySelector('body').addEventListener('touchstart', function(e) {
+                if (e.target.className === 'lightbox__image') {
+                    console.log('ahhh');
+                    touchstartX = e.changedTouches[0].screenX;
+                    touchstartY = e.changedTouches[0].screenY;
+                }
+            });
+
+            document.querySelector('body').addEventListener('touchend', function(e) {
+                if (e.target.className === 'lightbox__image') {
+                    console.log("boooo");
+                    touchendX = e.changedTouches[0].screenX;
+                    touchendY = e.changedTouches[0].screenY;
+                    handleSwipe(e);
+                }
+            });
+
+            // $j('.lightbox__image').addEventListener('touchstart', function(e) {
+            //     console.log("blah");
+            //     touchstartX = e.screenX;
+            //     touchstartY = e.screenY;
+            // }, false);
+
+            // $j('.lightbox__image').addEventListener('touchend', function(e) {
+            //     touchendX = e.screenX;
+            //     touchendY = e.screenY;
+            //     handleSwipe(e);
+            // }, false); 
+        };
+
+        var handleSwipe = function(e) {
+            console.log("sdgh");
+            if (touchendX < touchstartX) {
+                console.log("yo");
+                return nextImage(e, $j(this)); 
+            }
+            
+            if (touchendX > touchstartX) {
+                return previousImage(e, $j(this));
+            }
         };
 
         var displayLightbox = function(e, link) {
             e.preventDefault();
 
             $j('.lightbox').addClass('lightbox--display');
+            $j('body').addClass('body--fixed');
 
             $j('.lightbox__canvas').prepend('<img src="' + link.attr('href') + '" class="lightbox__image">');
 
@@ -58,6 +104,8 @@ var $j = jQuery.noConflict();
             e.preventDefault();
 
             $j('.lightbox').removeClass('lightbox--display');
+            $j('body').removeClass('body--fixed');
+
             emptyLightbox();
         };
 		

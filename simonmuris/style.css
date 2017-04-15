@@ -446,6 +446,11 @@ body {
   line-height: 1.3em;
 }
 
+.body--fixed {
+  height: 100%;
+  overflow: hidden;
+}
+
 h1 {
   font-size: 3em;
   line-height: 1.1em;
@@ -996,6 +1001,7 @@ ul li ul li ul li {
   right: 30px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  pointer-events: none;
 }
 .lightbox__controls:after {
   content: '';
@@ -1005,6 +1011,9 @@ ul li ul li ul li {
 .lightbox__control-arrow {
   display: inline-block;
   font-size: 30px;
+  padding: 0;
+  background: none;
+  pointer-events: visible;
 }
 .lightbox__control-arrow--previous {
   float: left;

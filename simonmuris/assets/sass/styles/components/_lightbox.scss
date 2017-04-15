@@ -51,6 +51,7 @@
 		left: 30px;
 		right: 30px;
 		transform: translateY(-50%);
+		pointer-events: none;
 
 		&:after
 		{
@@ -64,6 +65,9 @@
 	{
 		display: inline-block;
 		font-size: 30px;
+		padding: 0;
+		background: none;
+		pointer-events: visible;
 
 		&--previous
 		{
