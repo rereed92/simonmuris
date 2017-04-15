@@ -24,6 +24,8 @@
 		{
 			display: inline-block;
 			margin-right: $gutter-large;
+			background: none;
+			padding: 0;
 
 			&:last-child
 			{

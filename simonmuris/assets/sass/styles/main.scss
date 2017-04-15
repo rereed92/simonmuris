@@ -1,5 +1,3 @@
-@import 'base';
-
 /** Settings **/
 @import 'settings/borders';
 @import 'settings/border-radius';
@@ -23,6 +21,7 @@
 @import 'base/body';
 @import 'base/headings';
 @import 'base/images';
+@import 'base/lists';
 
 /** Objects **/
 @import 'objects/contain';
@@ -40,6 +39,7 @@
 @import 'components/gallery';
 @import 'components/header';
 @import 'components/lightbox';
+@import 'components/list';
 @import 'components/navigation';
 @import 'components/quote';
 @import 'components/process';

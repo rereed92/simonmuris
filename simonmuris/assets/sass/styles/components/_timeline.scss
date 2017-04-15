@@ -26,6 +26,8 @@
 		position: relative;
 		margin-bottom: $gutter-super-large;
 		display: block;
+		background: none;
+		padding: 0;
 
 		&:last-child
 		{

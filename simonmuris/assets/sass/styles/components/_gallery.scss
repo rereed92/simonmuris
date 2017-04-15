@@ -18,12 +18,15 @@
 		list-style: none;
 		text-align: center;
 		margin-bottom: $gutter-large;
+		background: none;
 	}
 
 	&__image
 	{
 		display: inline-block;
 		margin: 0;
+		border-radius: 10px;
+		background-color: $black;
 	}
 
 	&__link

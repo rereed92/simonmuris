@@ -79,5 +79,22 @@
             margin-bottom: 0;
             vertical-align: middle;
         }
+
+        &__heading
+        {
+            font-size: 2.5em
+        }
+    }
+}
+
+
+@media only screen and (max-width: $breakpoint-mobile)
+{
+    .title
+    {
+        &__heading
+        {
+            font-size: 1.8em;
+        }
     }
 }

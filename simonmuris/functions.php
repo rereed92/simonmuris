@@ -240,6 +240,7 @@ function enqueue_scripts() {
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js');
 	wp_enqueue_script( 'slideshow', get_template_directory_uri() . '/js/slideshow.js');
 	wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox.js');
+	wp_enqueue_script( 'process', get_template_directory_uri() . '/js/process.js');
 
 	// Add Genericons, used in the main stylesheet.
 	// wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
@@ -530,6 +531,15 @@ function my_css_attributes_filter($var) {
   return is_array($var) ? array_intersect($var, array('navigation__link', 'navigation__link--active', 'tabs__tab', 'tabs__tab--active')) : '';
 }
 
+
+function wpcodex_hide_email_shortcode( $atts , $content = null ) {
+	if ( ! is_email( $content ) ) {
+		return;
+	}
+
+	return '<p><a href="mailto:' . antispambot( $content ) . '">' . antispambot( $content ) . '</a></p>';
+}
+add_shortcode( 'email', 'wpcodex_hide_email_shortcode' );
 
 
 

@@ -8,7 +8,7 @@ $j(function()
 // $(document).ready(function () 
 // {   
 
-	console.log("hello");
+	// console.log("hello");
 
  //    if ($('html').hasClass('lt-ie9')) {
  //        $('html').browserWarning({
@@ -19,9 +19,10 @@ $j(function()
  //            closeIcon: '<i class="fa fa-times-circle"></i>'
  //        });
  //    }
+
 	$j('.gallery').lightbox();	
 
-	$j('.slideshow').slideshowFade();	
+	$j('.slideshow').slideshowFade({pagination: false, speed: 5000});	
 	var imageHeight = $j('.slideshow__image').height();
 	$j('.slideshow').height(imageHeight);
 
@@ -30,13 +31,14 @@ $j(function()
 		$j('.slideshow').height(imageHeight);
 	});
 
+	$j('.process').process();
 
-	$j('.process__image').hover(function() {
-		$j('.process__image').removeClass('process__image--active');
-		$j('.process__text').removeClass('process__text--display');
-		$j(this).parent().find('.process__text').addClass('process__text--display');
-		$j(this).addClass('process__image--active');
-	});
+	// $j('.process__image').hover(function() {
+	// 	$j('.process__image').removeClass('process__image--active');
+	// 	$j('.process__text').removeClass('process__text--display');
+	// 	$j(this).parent().find('.process__text').addClass('process__text--display');
+	// 	$j(this).addClass('process__image--active');
+	// });
 
 
 	$j('.navigation__menu').click(function() {
