@@ -147,7 +147,7 @@
 
 		&__links
 		{
-			padding: $gutter-large 0;
+			padding: $gutter-super 0 $gutter-large 0;
 			text-align: left;
 		}
 
@@ -155,6 +155,7 @@
 		{
 			display: block;
 			margin: 0 $gutter-super $gutter-small $gutter-super;
+			padding: 0;
 
 			&:last-child
 			{
@@ -164,6 +165,8 @@
 			& > a
 			{
 				display: block;
+				font-size: 1.3em;
+				padding-bottom: $gutter-large;
 			}
 		}
 

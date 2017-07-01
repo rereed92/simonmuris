@@ -1177,18 +1177,21 @@ ul li ul li ul li {
     transition: max-height 0.4s ease;
   }
   .navigation__links {
-    padding: 20px 0;
+    padding: 30px 0 20px 0;
     text-align: left;
   }
   .navigation__link {
     display: block;
     margin: 0 30px 10px 30px;
+    padding: 0;
   }
   .navigation__link:last-child {
     margin-bottom: 0;
   }
   .navigation__link > a {
     display: block;
+    font-size: 1.3em;
+    padding-bottom: 20px;
   }
   .navigation__small {
     display: inline-block;
