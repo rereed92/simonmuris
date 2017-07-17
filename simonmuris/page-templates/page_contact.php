@@ -18,7 +18,7 @@
 					if( !empty($location) ):
 					?>
 						<div id="contact__map"></div>
-						<script src='http://maps.googleapis.com/maps/api/js?sensor=false' type='text/javascript'></script>
+						<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsQpwdoL37vhPAdKOjUI8s7NMa65fdRGs&libraries=places&sensor=false"></script>
 
 						<script type="text/javascript">
 							var map;
